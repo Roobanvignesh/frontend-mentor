@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3ebe4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card .image img {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: grey;
+    margin-bottom: 15px;
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.content h1 span {
+    display: block;
+}
+
+.content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.price h2 {
+    font-size: 30px;
+    color: #3f8068;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #3f8068;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #246449;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .image {
+        background-image: url('./images/image-product-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .image img {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    .content h1{
+        font-size: 34px;
+    }
+    .content h1 span{
+        display: inline;
+    }
+}
